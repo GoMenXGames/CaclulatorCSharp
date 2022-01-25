@@ -1,0 +1,155 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="CaclulatorCSharp.MainWindow"
+    
+    Loaded="OnLoadWindow"
+    Title="Calculator C#" Height="288" Width="302" ResizeMode="NoResize" BorderBrush="Black" WindowStyle="None" Background="#FF2C2C2C" Icon="icon.png">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25px"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="25px"/>
+                <ColumnDefinition Width="25px"/>
+                <ColumnDefinition Width="25px"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="icon.png" Grid.Column="0" Height="25px" Width="25px" HorizontalAlignment="Left" Panel.ZIndex="1"/>
+            <Label x:Name="NameWindow" PreviewMouseLeftButtonDown="NameHold" Padding="26,0,0,0" Content="Calculator C#" Grid.Column="0" Background="#AAA" Grid.ColumnSpan="4" VerticalContentAlignment="Center" UseLayoutRounding="False"/>
+            <Label x:Name="HideBtn" PreviewMouseLeftButtonUp="HideBtn_Click" Grid.Column="1" Content="_" BorderBrush="#FF2B2B2B" Background="#FF555555" Foreground="White" Margin="1" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="1"/>
+            <Label x:Name="MaximazeBtn" PreviewMouseLeftButtonUp="MaximazeBtn_Click" Grid.Column="2" Content="❐" BorderBrush="#FF2B2B2B" Background="#FF555555" Foreground="White" Margin="1" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="1"/>
+            <Label x:Name="CloseBtn" PreviewMouseLeftButtonUp="CloseBtn_Click" Content="X" Grid.Column="3" BorderBrush="#FF2B2B2B" Background="#FF555555" Foreground="White" Margin="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" BorderThickness="1"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="50px"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="NumField" Margin="10" TextWrapping="NoWrap" Text="{Binding NumFieldText, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" FontSize="36" BorderBrush="Black" CaretBrush="#FF464646" OpacityMask="Black" Background="#FF1B1B1B" Foreground="#FF9B9B9B" SelectionBrush="#FF6FAC5D" MaxLines="1" Focusable="False" AllowDrop="False" IsHitTestVisible="False" IsTabStop="False" Grid.Column="0"/>
+            <Label Grid.Column="1" PreviewMouseLeftButtonUp="EraseBtn"  Content="C" Margin="5,10" Cursor="Hand" Background="#FFC55847" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+        </Grid>
+        <Grid Grid.Row="2" Margin="5,5,5,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="4" Grid.Row="1" Margin="2" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn" Content="5" Grid.Row="1" Grid.Column="1" Margin="2" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="6" Grid.Row="1" Grid.Column="2" Margin="2" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label x:Name="Num1" Content="1" Grid.Row="2" Margin="2,3,2,2" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="2" Grid.Row="2" Grid.Column="1" Margin="2,3,2,2" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="3" Grid.Row="2" Grid.Column="2" Margin="2,3,2,2" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="7" Margin="2,1,2,3" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="8" Grid.Column="1" Margin="2,1,2,3" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="9" Grid.Column="2" Margin="2,1,2,3" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="0" Grid.Row="3" Margin="2,3" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="." Grid.Row="3" Grid.Column="1" Margin="2,3" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="=" Grid.Row="3" Grid.Column="2" Margin="2,3" Cursor="Hand" Background="#FF6E6E6E" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="±" Grid.Row="1" Grid.Column="3" Margin="2,2,1,2" Cursor="Hand" Background="#FF1F1F1F" Foreground="White" FontFamily="Comic Sans MS" FontSize="22" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1,0,1,10" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="+" Grid.Row="2" Grid.Column="3" Margin="2,3,1,3" Cursor="Hand" Background="#FF1F1F1F" Foreground="White" FontFamily="Comic Sans MS" FontSize="22" BorderBrush="#FF272727" Grid.RowSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="%" Grid.Column="3" Margin="2,1,1,3" Cursor="Hand" Background="#FF1F1F1F" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="÷" Grid.Row="1" Grid.Column="4" Margin="2" Cursor="Hand" Background="#FF1F1F1F" Foreground="White" FontFamily="Comic Sans MS" FontSize="22" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="×" Grid.Row="2" Grid.Column="4" Margin="2,3,2,2" Cursor="Hand" Background="#FF1F1F1F" Foreground="White" FontFamily="Comic Sans MS" FontSize="22" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="√" Grid.Column="4" Margin="2,1,2,3" Cursor="Hand" Background="#FF1F1F1F" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label PreviewMouseLeftButtonUp="NameBtn"  Content="−" Grid.Row="3" Grid.Column="4" Margin="2,3" Cursor="Hand" Background="#FF1F1F1F" Foreground="White" FontFamily="Comic Sans MS" FontSize="22" BorderBrush="#FF272727" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+
+        </Grid>
+    </Grid>
+</Window>

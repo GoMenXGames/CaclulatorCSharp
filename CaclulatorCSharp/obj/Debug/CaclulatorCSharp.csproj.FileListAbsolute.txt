@@ -1,0 +1,13 @@
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\bin\Debug\CaclulatorCSharp.exe.config
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\CaclulatorCSharp.csprojResolveAssemblyReference.cache
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\MainWindow.baml
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\MainWindow.g.cs
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\App.g.cs
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\CaclulatorCSharp_MarkupCompile.cache
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\CaclulatorCSharp.g.resources
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\CaclulatorCSharp.Properties.Resources.resources
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\CaclulatorCSharp.csproj.GenerateResource.Cache
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\bin\Debug\CaclulatorCSharp.exe
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\bin\Debug\CaclulatorCSharp.pdb
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\CaclulatorCSharp.exe
+c:\users\gomanoyuid\documents\visual studio 2012\Projects\CaclulatorCSharp\CaclulatorCSharp\obj\Debug\CaclulatorCSharp.pdb
